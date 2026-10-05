@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1B2430;
+  --ink-soft: #4A5563;
+  --ink-muted: #707E94;
+  --paper: #EFF1EA;
+  --paper-alt: #E3E7DD;
+  --wine: #6B2737;
+  --wine-dark: #4E1C29;
+  --wine-soft: #F7ECEF;
+  --teal: #2E6E62;
+  --teal-dark: #20504A;
+  --teal-soft: #E4ECE8;
+  --gold: #B98B2E;
+  --gold-soft: #F6F1E3;
+  --line: rgba(27, 36, 48, 0.14);
+  --line-strong: rgba(27, 36, 48, 0.24);
+  --card-bg: #F7F8F4;
+  --card-bg-alt: #F0F2EB;
+  --radius: 3px;
+  --radius-md: 6px;
+  --font-heading: 'Source Serif 4', Georgia, serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --shadow-sm: 0 1px 3px rgba(27, 36, 48, 0.08);
+  --shadow-md: 0 4px 14px rgba(27, 36, 48, 0.09);
+  --shadow-lg: 0 12px 32px rgba(27, 36, 48, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.font-serif {
+  font-family: var(--font-heading);
+}
+
+.font-sans {
+  font-family: var(--font-body);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper-alt);
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
